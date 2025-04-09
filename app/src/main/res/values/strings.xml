@@ -10,4 +10,18 @@
     <string name="menu_home">Home</string>
     <string name="menu_coffee_bags">Coffee bags</string>
     <string name="menu_coffee_drinks">Drinks</string>
+
+    <string name="origin">Origin</string>
+    <string name="brand">Brand</string>
+    <string name="name">Name</string>
+    <string name="placeholder">Lorem</string>
+
+    <string name="desc_coffee_bag">Coffee bag</string>
+
+    <string-array name="coffee_brands">
+        <item>Boreal</item>
+        <item>Mokxa</item>
+        <item>Loutsa</item>
+        <item>BlackMass</item>
+    </string-array>
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="item_base">
+        <item name="android:layout_marginStart">@dimen/text_margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/text_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/text_margin_small</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+    </style>
+    <style
+        name="item_label"
+        parent="item_base">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

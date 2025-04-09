@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/image_size_large"
+        android:layout_height="@dimen/image_size_large"
+        android:id="@+id/item_image"
+        android:src="@drawable/ic_45_coffee_bag"
+        android:contentDescription="@string/desc_coffee_bag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/item_description"
+    />
+
+    <LinearLayout
+        android:id="@+id/item_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/item_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/label_brand"
+                style="@style/item_label"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/brand"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/value_brand"
+                style="@style/item_base"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/placeholder"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/item_label"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/name"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/value_name"
+                style="@style/item_base"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/placeholder"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/label_origin"
+                style="@style/item_label"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/origin"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/value_origin"
+                style="@style/item_base"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/placeholder"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
