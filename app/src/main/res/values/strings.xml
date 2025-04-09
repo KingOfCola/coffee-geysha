@@ -8,6 +8,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
     <string name="menu_coffee_bags">Coffee bags</string>
     <string name="menu_coffee_drinks">Drinks</string>
 
@@ -18,10 +19,6 @@
 
     <string name="desc_coffee_bag">Coffee bag</string>
 
-    <string-array name="coffee_brands">
-        <item>Boreal</item>
-        <item>Mokxa</item>
-        <item>Loutsa</item>
-        <item>BlackMass</item>
-    </string-array>
+    <!--    Messages-->
+    <string name="message_home_title">Welcome to Coffee Geysha App</string>
 </resources>

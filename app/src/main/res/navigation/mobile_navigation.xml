@@ -12,9 +12,15 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_coffee_bags"
+        android:name="com.example.coffeegeysha.ui.coffee_bags.CoffeeListFragment"
+        android:label="@string/menu_coffee_bags"
+        tools:layout="@layout/fragment_coffee_list" />
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.coffeegeysha.ui.gallery.GalleryFragment"
-        android:label="@string/menu_coffee_bags"
+        android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment

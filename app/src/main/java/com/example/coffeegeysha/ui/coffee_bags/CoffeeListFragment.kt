@@ -1,4 +1,4 @@
-package com.example.coffeegeysha.ui.home
+package com.example.coffeegeysha.ui.coffee_bags
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.coffeegeysha.databinding.FragmentHomeBinding
+import com.example.coffeegeysha.databinding.FragmentCoffeeListBinding
+import com.example.coffeegeysha.datasources.CoffeeSource
 
-class HomeFragment : Fragment() {
+class CoffeeListFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentCoffeeListBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,15 +24,21 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
+            ViewModelProvider(this)[CoffeeListViewModel::class.java]
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentCoffeeListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHomeTitle
+        val textView: TextView = binding.textCoffeeListTitle
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        // Gets the coffee list
+        val coffeeList = CoffeeSource(this.requireContext()).getCoffeeList()
+
+        val coffeeItems = binding.coffeeItemList
+        coffeeItems.adapter = CoffeeItemAdapter(coffeeList)
         return root
     }
 
