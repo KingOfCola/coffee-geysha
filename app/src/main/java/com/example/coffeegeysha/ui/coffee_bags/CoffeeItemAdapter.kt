@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.coffeegeysha.R
-import com.example.coffeegeysha.data.Coffee
+import com.example.coffeegeysha.data.entities.Coffee
 
 class CoffeeItemAdapter(val coffeeItemList: List<Coffee>) : RecyclerView.Adapter<CoffeeItemAdapter.CoffeeViewHolder>() {
 
