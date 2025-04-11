@@ -24,8 +24,8 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.coffeegeysha.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_coffee_drinks"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_add_coffee_bag"
+        android:name="com.example.coffeegeysha.ui.coffee_bag_form.CoffeeBagFormFragment"
+        android:label="@string/menu_add_coffee_bag"
+        tools:layout="@layout/fragment_coffee_bag_form" />
 </navigation>

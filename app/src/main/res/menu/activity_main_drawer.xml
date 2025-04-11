@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_20_coffee_bag"
             android:title="@string/menu_coffee_bags" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_add_coffee_bag"
+            android:icon="@drawable/ic_add"
+            android:title="@string/menu_add_coffee_bag" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_24_cup"

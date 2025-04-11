@@ -8,13 +8,20 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="menu_add_coffee_bag">Add a new coffee bag</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_coffee_bags">Coffee bags</string>
     <string name="menu_coffee_drinks">Drinks</string>
 
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
+
+    <string name="title_coffee_bag_form">Enter a new coffee bag</string>
+
     <string name="origin">Origin</string>
     <string name="brand">Brand</string>
     <string name="name">Name</string>
+    <string name="flavors">Flavors</string>
     <string name="placeholder">Lorem</string>
 
     <string name="desc_coffee_bag">Coffee bag</string>
