@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -32,6 +33,11 @@ class CoffeeBagFormFragment : Fragment() {
         coffeeBagFormViewModel.text.observe(viewLifecycleOwner) {
             textView.text = textView.text
         }
+
+        val brandField : EditText = binding.valueBrand
+        val nameField : EditText = binding.valueName
+        val originField : EditText = binding.valueOrigin
+
 
         return root
     }

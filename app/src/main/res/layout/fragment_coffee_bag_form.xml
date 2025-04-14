@@ -1,102 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/text_coffee_list_title"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.coffeegeysha.ui.coffee_bag_form.CoffeeBagFormViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="@string/title_coffee_bag_form"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/form_coffee_bag"/>
-
-    <GridLayout
-        android:id="@+id/form_coffee_bag"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:columnCount="2"
-        app:layout_constraintTop_toBottomOf="@+id/text_coffee_list_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TextView
-            android:id="@+id/label_brand"
-            style="@style/item_label"
-            android:text="@string/brand"
-            android:layout_columnWeight="1"
-            android:labelFor="@id/value_brand"/>
-        <EditText
-            android:id="@+id/value_brand"
-            android:autofillHints="Coffee"
-            android:layout_columnWeight="1"
-            android:inputType="text"/>
+            android:id="@+id/text_coffee_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="@string/title_coffee_bag_form"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/form_coffee_bag"/>
+
+        <GridLayout
+            android:id="@+id/form_coffee_bag"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:columnCount="2"
+            app:layout_constraintTop_toBottomOf="@+id/text_coffee_list_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/label_brand"
+                style="@style/item_label"
+                android:text="@string/brand"
+                android:layout_columnWeight="1"
+                android:labelFor="@id/value_brand"/>
+            <EditText
+                android:id="@+id/value_brand"
+                android:autofillHints="Coffee"
+                android:layout_columnWeight="1"
+                android:inputType="text"
+                android:text="@={vm.brand}"/>
+
+            <TextView
+                android:id="@+id/label_name"
+                style="@style/item_label"
+                android:text="@string/name"
+                android:layout_columnWeight="1"
+                android:labelFor="@id/value_name"/>
+            <EditText
+                android:id="@+id/value_name"
+                android:autofillHints="Geysha"
+                android:layout_columnWeight="1"
+                android:inputType="text"
+                android:text="@={vm.name}"/>
+
+            <TextView
+                android:id="@+id/label_origin"
+                style="@style/item_label"
+                android:text="@string/origin"
+                android:layout_columnWeight="1"
+                android:labelFor="@id/value_origin"/>
+            <EditText
+                android:id="@+id/value_origin"
+                android:autofillHints="Peru"
+                android:layout_columnWeight="1"
+                android:inputType="text"
+                android:text="@={vm.origin}"/>
+
+
+            <TextView
+                android:id="@+id/label_flavors"
+                style="@style/item_label"
+                android:text="@string/flavors"
+                android:layout_columnWeight="1"
+                android:labelFor="@id/value_flavors"/>
+            <EditText
+                android:id="@+id/value_flavors"
+                android:autofillHints="Peach"
+                android:layout_columnWeight="1"
+                android:inputType="text"
+                android:text="@={vm.flavors}"/>
+        </GridLayout>
 
         <TextView
-            android:id="@+id/label_name"
-            style="@style/item_label"
-            android:text="@string/name"
-            android:layout_columnWeight="1"
-            android:labelFor="@id/value_name"/>
-        <EditText
-            android:id="@+id/value_name"
-            android:autofillHints="Geysha"
-            android:layout_columnWeight="1"
-            android:inputType="text"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/form_coffee_bag"
+            app:layout_constraintBottom_toTopOf="@id/validation_buttons"
+            android:text="@{vm.message}"
+            />
 
-        <TextView
-            android:id="@+id/label_origin"
-            style="@style/item_label"
-            android:text="@string/origin"
-            android:layout_columnWeight="1"
-            android:labelFor="@id/value_origin"/>
-        <EditText
-            android:id="@+id/value_origin"
-            android:autofillHints="Peru"
-            android:layout_columnWeight="1"
-            android:inputType="text"/>
+        <LinearLayout
+            android:id="@+id/validation_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/button_base"
+                android:text="@string/button_cancel"/>
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/button_base"
+                android:text="@string/button_save"
+                android:onClick="@{()->vm.updateMessage()}"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <TextView
-            android:id="@+id/label_flavors"
-            style="@style/item_label"
-            android:text="@string/flavors"
-            android:layout_columnWeight="1"
-            android:labelFor="@id/value_flavors"/>
-        <EditText
-            android:id="@+id/value_flavors"
-            android:autofillHints="Peach"
-            android:layout_columnWeight="1"
-            android:inputType="text"/>
-    </GridLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
-        <Button
-            android:id="@+id/button_cancel"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            style="@style/button_base"
-            android:text="@string/button_cancel"/>
-        <Button
-            android:id="@+id/button_save"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            style="@style/button_base"
-            android:text="@string/button_save"/>
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
